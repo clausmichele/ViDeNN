@@ -53,12 +53,12 @@ class vidcnn(object):
         start = time.time()
         for idx in xrange(len(noisy_data)-1):   
             if idx==0:
-                test = cv2.imread(orig_data[idx])[500:1000,500:1000,:]
-                test1 = cv2.imread(orig_data[idx+1])[500:1000,500:1000,:]
-                test2 = cv2.imread(orig_data[idx+2])[500:1000,500:1000,:]
-                noisy = cv2.imread(noisy_data[idx])[500:1000,500:1000,:]
-                noisy1 = cv2.imread(noisy_data[idx+1])[500:1000,500:1000,:]
-                noisy2 = cv2.imread(noisy_data[idx+2])[500:1000,500:1000,:]
+                test = cv2.imread(orig_data[idx])
+                test1 = cv2.imread(orig_data[idx+1])
+                test2 = cv2.imread(orig_data[idx+2])
+                noisy = cv2.imread(noisy_data[idx])
+                noisy1 = cv2.imread(noisy_data[idx+1])
+                noisy2 = cv2.imread(noisy_data[idx+2])
                 
                 test = test.astype(np.float32) / 255.0
                 test1 = test1.astype(np.float32) / 255.0
@@ -77,12 +77,6 @@ class vidcnn(object):
                 noisyin[2] = noisy2 
                 out = self.sess.run([self.Y],feed_dict={self.X:noisyin})
                 out = np.asarray(out)
-
-#                psnr = psnr_scaled(test1,(out[0,0]+out[0,1]+out[0,2])/3)
-#                cv2.imwrite(save_dir + '/%04d.png'%idx,(out[0,0]+out[0,1]+out[0,2])/3*255)
-#
-#                print psnr
-#                quit()
 
                 noisyin2[0,:,:,0:3] = out[0,0]
                 noisyin2[0,:,:,3:6] = out[0,0]
