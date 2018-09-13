@@ -1,0 +1,2 @@
+model_checkpoint_path: "VidCNN-tensorflow-0"
+all_model_checkpoint_paths: "VidCNN-tensorflow-0"
