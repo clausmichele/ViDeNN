@@ -29,3 +29,12 @@ ffmpeg
 
 # How to denoise my own video?
 
+If you have a noisy video file, you can use the script calling it in a terminal:
+```
+$ sh denoise.sh
+```
+It will first extract all the frames using FFmpeg and then start VidCNN to perform blind video denoising.
+
+# Issues?
+
+Feel free to open an issue if you have any problem, I will do my best to help you.
