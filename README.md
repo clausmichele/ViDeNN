@@ -2,7 +2,7 @@
 
 # ViDeNN: Deep Blind Video Denoising
 
-![](./img/vidcnn.png)
+![](./img/ViDeNN.png)
 
 This repository contains my master thesis project called ViDeNN - Learning Blind Video Denoising.
 The provided code is for testing purposes, I have not included the training part yet nor the self-recorded test videos.
