@@ -1,11 +1,11 @@
-[![AUR](https://img.shields.io/aur/license/yaourt.svg?style=plastic)](LICENSE)
-
 # ViDeNN: Deep Blind Video Denoising
 
 ![](./img/ViDeNN.png)
 
-This repository contains my master thesis project called ViDeNN - Deep Blind Video Denoising.
+This repository contains my master thesis project called ViDeNN - Deep Blind Video Denoising. 
 The provided code is for testing purposes, I have not included the training part yet nor the self-recorded test videos.
+
+https://arxiv.org/abs/1904.10898
 
 # Introduction
 
