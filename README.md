@@ -28,6 +28,7 @@ ffmpeg
 
 # How to denoise my own video?
 
+Important: the network has not been trained for general-purpose denoising of compressed videos. If the output includes some artifacts try to use the other checkpoint, modifying the last line of the script with --ckpt_dir='./ckpt_vidcnn-g'.
 If you have a noisy video file, you can use the script calling it in a terminal:
 ```
 $ sh denoise.sh
