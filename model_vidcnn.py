@@ -27,7 +27,7 @@ def Temp3_CNN(input):
         output = tf.layers.conv2d(output, 3, 3, padding='same')
     return input_middle - output
      
-class vidcnn(object):
+class videnn(object):
     def __init__(self, sess):
         self.sess = sess
         self.Y_ = tf.placeholder(tf.float32, [None, None, None, 3],name='clean_image')
@@ -42,7 +42,7 @@ class vidcnn(object):
 
 
     def test(self, noisy_data, orig_data, ckpt_dir, save_dir):
-        """Test VidCNN"""
+        """Test ViDeNN"""
         # init variables
         tf.global_variables_initializer().run()                   
         assert len(noisy_data) != 0, '[!] No test data in the specified folder! Check that contains an original and noisy folder.'
