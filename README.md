@@ -3,7 +3,6 @@
 <img src="./img/ViDeNN.png" align="center" width="480">
 
 This repository contains my master thesis project called ViDeNN - Deep Blind Video Denoising. 
-The provided code is for testing purposes, I have not included the training part yet nor the self-recorded test videos.
 
 ## Paper ##
 <img src="http://cvpr2019.thecvf.com/images/CVPRLogo.png" align="left" width="256">
