@@ -85,11 +85,11 @@ If you want to fine tune the pre-trained AWGN model use:
 
 ## Testing ##
 
-Important: the network has not been trained for general-purpose denoising of compressed (h264, h265 ecc) videos. If the output includes some artifacts try to use the other checkpoint, modifying the last line of the script with --ckpt_dir='./ckpt_vidcnn-g'.
+Important: the network has not been trained for general-purpose denoising of compressed (h264, h265 ecc) videos. If the output includes some artifacts try to use the other checkpoint, modifying the last line of the script with --checkpoint_dir='./ckpt_vidcnn-g'.
 The denoising process requires a lot of memory, if you don't have a GPU with enough memory available, try to set --use_gpu=0 and denoise using CPU, or downscale/crop the video.
 If you have a noisy video file, you can use the script calling it in a terminal:
 ```
-$ sh denoise.sh
+$ sh denoise.sh video_file_path
 ```
 It will first extract all the frames using FFmpeg and then start ViDeNN to perform blind video denoising.
 
