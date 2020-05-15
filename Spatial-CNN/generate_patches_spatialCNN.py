@@ -53,8 +53,8 @@ def generate_patches():
 		numPatches = (origin_patch_num / args.bat_size + 1) * args.bat_size #round 
 	else:
 		numPatches = origin_patch_num
-	print "[*] Number of patches = %d, batch size = %d, total batches = %d" % \
-		(numPatches, args.bat_size, numPatches / args.bat_size)
+	print ("[*] Number of patches = %d, batch size = %d, total batches = %d" % \
+		(numPatches, args.bat_size, numPatches / args.bat_size))
 
 	# data matrix 4-D
 	inputs = np.zeros((numPatches, args.pat_size, args.pat_size, 3), dtype="uint8") # clean patches
