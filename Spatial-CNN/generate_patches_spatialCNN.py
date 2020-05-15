@@ -57,8 +57,8 @@ def generate_patches():
 		(numPatches, args.bat_size, numPatches / args.bat_size))
 
 	# data matrix 4-D
-	inputs = np.zeros((numPatches, args.pat_size, args.pat_size, 3), dtype="uint8") # clean patches
-	inputs2 = np.zeros((numPatches, args.pat_size, args.pat_size, 3), dtype="uint8") # noisy patches
+	inputs = np.zeros((int(numPatches), args.pat_size, args.pat_size, 3), dtype="uint8") # clean patches
+	inputs2 = np.zeros((int(numPatches), args.pat_size, args.pat_size, 3), dtype="uint8") # noisy patches
 	
 	count = 0
 	# generate patches
