@@ -82,7 +82,7 @@ def generate_patches():
 						count += 1
 	# pad the batch
 	if count < numPatches:
-		to_pad = numPatches - count
+		to_pad = int(numPatches - count)
 		inputs[-to_pad:, :, :, :] = inputs[:to_pad, :, :, :]
 		inputs2[-to_pad:, :, :, :] = inputs2[:to_pad, :, :, :]
 
