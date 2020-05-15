@@ -64,7 +64,7 @@ class train_data():
 
 
 def load_data(filepath=''):
-	print filepath
+	print (filepath)
 	return train_data(filepath=filepath)
 
 
