@@ -99,9 +99,9 @@ def generate_patches():
 
 	inputs = inputs[:count-1]
 	inputs2 = inputs2[:count-1]
- 	np.save('./data/train/frames_clean_pats', inputs)
+	np.save('./data/train/frames_clean_pats', inputs)
 	print("[*] Size of input clean tensor = " + str(inputs.shape))
- 	np.save('./data/train/frames_noisy_pats', inputs2)
+	np.save('./data/train/frames_noisy_pats', inputs2)
 	print("[*] Size of input noisy tensor = " + str(inputs2.shape))
 	print("[*] Patches generated and saved!")
 
