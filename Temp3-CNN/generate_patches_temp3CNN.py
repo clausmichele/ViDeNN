@@ -84,7 +84,7 @@ def generate_patches():
 			img1_ns = np.reshape(np.array(img1_ns, dtype="uint8"), (img1_ns.shape[0], img1_ns.shape[1], 3))   
 			img2s = np.reshape(np.array(img2s, dtype="uint8"), (img2s.shape[0], img2s.shape[1], 3))		 
 			img2_ns = np.reshape(np.array(img2_ns, dtype="uint8"), (img2_ns.shape[0], img2_ns.shape[1], 3))
-			for j in xrange(DATA_AUG_TIMES):
+			for j in range(DATA_AUG_TIMES):
 				im_h = img0s.shape[0]; im_w = img0s.shape[1]
 				for x in range(0 + step, im_h - pat_size, stride):
 					for y in range(0 + step, im_w - pat_size, stride):
