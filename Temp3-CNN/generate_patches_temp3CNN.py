@@ -56,7 +56,7 @@ def generate_patches():
 	inputs = np.zeros((numPatches, pat_size, pat_size, 9), dtype="uint8")
 	inputs2 = np.zeros((numPatches, pat_size, pat_size, 9), dtype="uint8")
 	# generate patches
-	ind = np.multiply(range(len(filepaths_noisy)/3),3)
+	ind = np.multiply(range(int(len(filepaths_noisy)/3)),3)
 	random.shuffle(ind)
 	for i in ind:
 		img0 = cv2.imread(filepaths[i])
