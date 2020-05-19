@@ -53,8 +53,8 @@ def generate_patches():
 	count = 0
 	print("total patches = %d , batch size = %d, total batches = %d" % (numPatches, bat_size, numPatches / bat_size))
 	# data matrix 4-D
-	inputs = np.zeros((numPatches, pat_size, pat_size, 9), dtype="uint8")
-	inputs2 = np.zeros((numPatches, pat_size, pat_size, 9), dtype="uint8")
+	inputs = np.zeros((int(numPatches), pat_size, pat_size, 9), dtype="uint8")
+	inputs2 = np.zeros((int(numPatches), pat_size, pat_size, 9), dtype="uint8")
 	# generate patches
 	ind = np.multiply(range(int(len(filepaths_noisy)/3)),3)
 	random.shuffle(ind)
