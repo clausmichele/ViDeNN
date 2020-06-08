@@ -34,7 +34,8 @@ opencv
 tqdm
 ```
 You need at least 25GB of free disk space for training.
-The code has been tested with Python 2.7, but it should work with Python 3 as well.
+The code has been tested with Python 2.7.
+Edit : As of 20th May, this code works with Python 3 as well.
 
 ## Training ##
 

@@ -53,12 +53,12 @@ def generate_patches():
 		numPatches = (origin_patch_num / args.bat_size + 1) * args.bat_size #round 
 	else:
 		numPatches = origin_patch_num
-	print "[*] Number of patches = %d, batch size = %d, total batches = %d" % \
-		(numPatches, args.bat_size, numPatches / args.bat_size)
+	print ("[*] Number of patches = %d, batch size = %d, total batches = %d" % \
+		(numPatches, args.bat_size, numPatches / args.bat_size))
 
 	# data matrix 4-D
-	inputs = np.zeros((numPatches, args.pat_size, args.pat_size, 3), dtype="uint8") # clean patches
-	inputs2 = np.zeros((numPatches, args.pat_size, args.pat_size, 3), dtype="uint8") # noisy patches
+	inputs = np.zeros((int(numPatches), args.pat_size, args.pat_size, 3), dtype="uint8") # clean patches
+	inputs2 = np.zeros((int(numPatches), args.pat_size, args.pat_size, 3), dtype="uint8") # noisy patches
 	
 	count = 0
 	# generate patches
@@ -82,7 +82,7 @@ def generate_patches():
 						count += 1
 	# pad the batch
 	if count < numPatches:
-		to_pad = numPatches - count
+		to_pad = int(numPatches - count)
 		inputs[-to_pad:, :, :, :] = inputs[:to_pad, :, :, :]
 		inputs2[-to_pad:, :, :, :] = inputs2[:to_pad, :, :, :]
 

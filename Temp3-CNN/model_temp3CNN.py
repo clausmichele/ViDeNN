@@ -130,7 +130,7 @@ class TemporalDenoiser(object):
 				print("img%d PSNR: %.2f %.2f" % (idx, psnr, psnr))
 				_, path = eval_data[idx].split('al')
 #				cv2.imwrite(('./data/denoised/%s' %path), noisy)
-				print 'last frames'
+				print('last frames')
 				continue
 			test = cv2.imread(eval_data[idx])
 			test1 = cv2.imread(eval_data[idx+1])

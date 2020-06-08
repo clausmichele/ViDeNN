@@ -53,10 +53,10 @@ def generate_patches():
 	count = 0
 	print("total patches = %d , batch size = %d, total batches = %d" % (numPatches, bat_size, numPatches / bat_size))
 	# data matrix 4-D
-	inputs = np.zeros((numPatches, pat_size, pat_size, 9), dtype="uint8")
-	inputs2 = np.zeros((numPatches, pat_size, pat_size, 9), dtype="uint8")
+	inputs = np.zeros((int(numPatches), pat_size, pat_size, 9), dtype="uint8")
+	inputs2 = np.zeros((int(numPatches), pat_size, pat_size, 9), dtype="uint8")
 	# generate patches
-	ind = np.multiply(range(len(filepaths_noisy)/3),3)
+	ind = np.multiply(range(int(len(filepaths_noisy)/3)),3)
 	random.shuffle(ind)
 	for i in ind:
 		img0 = cv2.imread(filepaths[i])
@@ -84,7 +84,7 @@ def generate_patches():
 			img1_ns = np.reshape(np.array(img1_ns, dtype="uint8"), (img1_ns.shape[0], img1_ns.shape[1], 3))   
 			img2s = np.reshape(np.array(img2s, dtype="uint8"), (img2s.shape[0], img2s.shape[1], 3))		 
 			img2_ns = np.reshape(np.array(img2_ns, dtype="uint8"), (img2_ns.shape[0], img2_ns.shape[1], 3))
-			for j in xrange(DATA_AUG_TIMES):
+			for j in range(DATA_AUG_TIMES):
 				im_h = img0s.shape[0]; im_w = img0s.shape[1]
 				for x in range(0 + step, im_h - pat_size, stride):
 					for y in range(0 + step, im_w - pat_size, stride):
@@ -99,9 +99,9 @@ def generate_patches():
 
 	inputs = inputs[:count-1]
 	inputs2 = inputs2[:count-1]
- 	np.save('./data/train/frames_clean_pats', inputs)
+	np.save('./data/train/frames_clean_pats', inputs)
 	print("[*] Size of input clean tensor = " + str(inputs.shape))
- 	np.save('./data/train/frames_noisy_pats', inputs2)
+	np.save('./data/train/frames_noisy_pats', inputs2)
 	print("[*] Size of input noisy tensor = " + str(inputs2.shape))
 	print("[*] Patches generated and saved!")
 
