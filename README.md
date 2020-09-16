@@ -14,7 +14,7 @@ This repository contains my master thesis project called ViDeNN - Deep Blind Vid
 With this pretrained tensorflow model you will be able to denoise videos affected by different types of degradation, such as Additive White Gaussian Noise and videos in Low-Light conditions. The latter has been tested only on one particular camera raw data, so it might not work on different sources. ViDeNN works in blind conditions, it does not require any information over the content of the input noisy video.
 IMPORTANT! If you want to denoise data affected by Gaussian noise (AWGN), it has to be clipped between 0 and 255 before denoising it, otherwise you will get strange artifacts in your denoised output.
 
-![](./img/tennis_gauss.png)
+![](./img/tennis_gauss_new.png)
 
 
 ## Architecture ##
