@@ -37,6 +37,9 @@ You need at least 25GB of free disk space for training.
 The code has been tested with Python 2.7.
 Edit : As of 20th May, this code works with Python 3 as well.
 
+## Windows Users ##
+Please check this issue https://github.com/clausmichele/ViDeNN/issues/19 if you have problems with the code. The code has been developed and tested on Linux/Ubuntu, but Windows has a different path structure, using \\ instead of /.
+
 ## Training ##
 
 The training process is divided in two steps (see the paper for more details)
