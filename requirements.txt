@@ -1,4 +1,4 @@
-tensorflow-gpu==1.4  # Also tested with 1.14
+tensorflow-gpu==2.7.2  # Also tested with 1.14
 numpy
 opencv-python
 tqdm
